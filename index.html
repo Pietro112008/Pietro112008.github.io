@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Nome Sobrenome | Psicologia Criminal & Perícia Forense</title>
+    <style>
+        :root {
+            --primary-color: #1a252f;
+            --secondary-color: #34495e;
+            --accent-color: #c0392b;
+            --light-bg: #ecf0f1;
+            --text-color: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #bdc3c7;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-top: 3px solid var(--secondary-color);
+        }
+
+        .service-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Seção Funcional Avançada */
+        .tool-box {
+            background: #fdfefe;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            background-color: #fff;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            background-color: #962d22;
+        }
+
+        #resultArea {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border-radius: 6px;
+            display: none;
+            text-align: left;
+            border-left: 8px solid transparent;
+        }
+
+        .risk-low { background-color: #d4edda; color: #155724; border-color: #28a745; }
+        .risk-medium { background-color: #fff3cd; color: #856404; border-color: #ffc107; }
+        .risk-high { background-color: #f8d7da; color: #721c24; border-color: #dc3545; }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pietro Vicente</h1>
+        <p>Psicólogo Criminal & Perito Forense — CRP 00/00000</p>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre Mim</a>
+        <a href="#servicos">Serviços Forenses</a>
+        <a href="#ferramenta">Ferramenta de Triagem Avançada</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="sobre">
+            <h2>Sobre a Atuação</h2>
+            <p>Especialista na interface entre a Ciência Psicológica e o Direito Criminal. Atuo diretamente na avaliação de sanidade mental, psicodiagnóstico forense, análise de perfil comportamental e na produção de laudos e pareceres técnicos de alta robustez científica para subsidiar decisões judiciais complexas.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Serviços e Especialidades</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Assistência Técnico-Defensiva</h3>
+                    <p>Atuação em processos criminais avaliando o réu, formulando quesitos técnicos para a perícia oficial e confeccionando Pareceres Psicológicos Forenses.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Avaliação de Sanidade e Imputabilidade</h3>
+                    <p>Exames detalhados e aplicação de testes validados para analisar a capacidade de compreensão e autodeterminação do sujeito no momento do ato delitivo.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Análise de Risco de Reincidência</h3>
+                    <p>Avaliação técnica e criminológica estruturada utilizando protocolos científicos para mensurar o risco de violência e reincidência criminal.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ferramenta" class="tool-box">
+            <h2>Ferramenta Clínica: Protocolo de Triagem de Risco Reincidente (6 Fatores)</h2>
+            <p style="margin-bottom: 1.5rem; font-size: 0.95rem; color: #7f8c8d;">
+                *Uso restrito. Este sistema computa indicadores baseados nas guias internacionais de avaliação de risco de violência (HCR-20 / PCL-R) para estimar o prognóstico criminológico do indivíduo.
+            </p>
+            
+            <form id="triagemForm">
+                <div class="form-group">
+                    <label for="nomeCliente">Identificação / Iniciais do Avaliado:</label>
+                    <input type="text" id="nomeCliente" required placeholder="Ex: R.C.A. (Evite nomes completos por sigilo ético)">
+                </div>
+
+                <div class="form-grid">
+                    <div>
+                        <div class="form-group">
+                            <label for="historico">1. Histórico de Violência Prévia:</label>
+                            <select id="historico" required>
+                                <option value="0">Nenhum histórico/Primeiro delito (0 pts)</option>
+                                <option value="2">Atos violentos isolados ou de menor gravidade (2 pts)</option>
+                                <option value="4">Histórico severo, crônico ou crimes hediondos (4 pts)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="impulsividade">2. Controle de Impulsos e Instabilidade:</label>
+                            <select id="impulsividade" required>
+                                <option value="0">Estável, tolerante à frustração (0 pts)</option>
+                                <option value="2">Impulsividade moderada / Reações intempestivas ocasionais (2 pts)</option>
+                                <option value="4">Altamente impulsivo, explosivo, busca estímulos de risco (4 pts)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="empatia">3. Esfera Afetiva (Empatia e Remorso):</label>
+                            <select id="empatia" required>
+                                <option value="0">Demonstra empatia real e remorso pelo dano causado (0 pts)</option>
+                                <option value="2">Minimiza o crime, culpa a vítima ou demonstra frieza fria (2 pts)</option>
+                                <option value="4">Total ausência de remorso, afeto superficial, traços psicopáticos claros (4 pts)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="form-group">
+                            <label for="idadeInicio">4. Idade no Primeiro Conflito com a Lei:</label>
+                            <select id="idadeInicio" required>
+                                <option value="0">Vida adulta (acima de 21 anos) (0 pts)</option>
+                                <option value="2">Jovem adulto (entre 18 e 21 anos) (2 pts)</option>
+                                <option value="4">Histórico desde a infância/adolescência (Atos Infracionais) (4 pts)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="substancias">5. Abuso de Substâncias (Álcool / Drogas ilícitas):</label>
+                            <select id="substancias" required>
+                                <option value="0">Não consome ou uso estritamente social (0 pts)</option>
+                                <option value="2">Histórico de abuso passado, atualmente controlado (2 pts)</option>
+                                <option value="4">Dependência ativa, uso severo ligado diretamente ao comportamento criminoso (4 pts)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="apoioSocial">6. Estabilidade Social e Redes de Apoio:</label>
+                            <select id="apoioSocial" required>
+                                <option value="0">Emprego fixo, suporte familiar presente e planos viáveis (0 pts)</option>
+                                <option value="2">Instabilidade laboral ou suporte familiar fragilizado (2 pts)</option>
+                                <option value="4">Marginalizado, sem moradia fixa, desempregado crônico, recusa apoio (4 pts)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" onclick="calcularRisco()">Gerar Laudo de Triagem Pericial</button>
+            </form>
+
+            <div id="resultArea"></div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato Profissional</h2>
+            <p>Necessita de uma perícia, assistência técnica ou consultoria em psicologia criminal? Entre em contato para avaliar a viabilidade do caso.</p>
+            <p style="margin-top: 1rem; font-weight: bold;">📧 Email: contato@seusiteforense.com.br</p>
+            <p>📞 Telefone / WhatsApp: (11) 99999-9999</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Dr. Pietro Vicente - Psicologia Forense Aplicada à Justiça Criminal</p>
+    </footer>
+
+    <script>
+        function calcularRisco() {
+            const cliente = document.getElementById('nomeCliente').value;
+            
+            // Coleta de todos os 6 fatores
+            const f1 = parseInt(document.getElementById('historico').value);
+            const f2 = parseInt(document.getElementById('impulsividade').value);
+            const f3 = parseInt(document.getElementById('empatia').value);
+            const f4 = parseInt(document.getElementById('idadeInicio').value);
+            const f5 = parseInt(document.getElementById('substancias').value);
+            const f6 = parseInt(document.getElementById('apoioSocial').value);
+
+            if(!cliente) {
+                alert("Por favor, insira as iniciais do avaliado para gerar o relatório.");
+                return;
+            }
+
+            // Soma total vai até 24 agora
+            const pontuacaoTotal = f1 + f2 + f3 + f4 + f5 + f6;
+            const resultArea = document.getElementById('resultArea');
+            resultArea.style.display = "block";
+
+            let classificacao = "";
+            let classeCss = "";
+            let parecerTecnico = "";
+
+            if (pontuacaoTotal <= 7) {
+                classificacao = "BAIXO RISCO DE REINCIDÊNCIA CRIMINAL";
+                classeCss = "risk-low";
+                parecerTecnico = "O avaliado apresenta fatores de proteção social estáveis e baixo índice de traços antissociais crônicos. Indicado para penas alternativas, regimes abertos ou progressão de regime padrão, com indicação de psicoterapia focada em metas.";
+            } else if (pontuacaoTotal <= 15) {
+                classificacao = "MÉDIO RISCO (ZONA DE ATENÇÃO)";
+                classeCss = "risk-medium";
+                parecerTecnico = "Presença de fatores de risco moderados (impulsividade ou histórico que merecem atenção). Há necessidade de acompanhamento psicossocial contínuo e monitoramento estrito de gatilhos ambientais/substâncias antes de concessões de total liberdade.";
+            } else {
+                classificacao = "ALTO RISCO / PROGNÓSTICO CRÍTICO";
+                classeCss = "risk-high";
+                parecerTecnico = "Alerta Forense. O indivíduo pontuou alto em múltiplos fatores estáticos e dinâmicos (esfera afetiva severamente comprometida e histórico crônico). Sugere-se a aplicação urgente de escalas complementares de padrão-ouro (como o PCL-R oficial) e forte cautela em decisões de progressão de regime sem contenção.";
+            }
+
+            resultArea.className = ""; 
+            resultArea.classList.add(classeCss);
+            resultArea.innerHTML = `<h3>Relatório Preliminar de Triagem Forense</h3><br>
+                                    <strong>Código do Avaliado:</strong> ${cliente}<br>
+                                    <strong>Score Total:</strong> ${pontuacaoTotal} de 24 pontos possíveis.<br>
+                                    <strong>Resultado da Análise:</strong> ${classificacao}<br><br>
+                                    <strong>Diretriz Sugerida:</strong> ${parecerTecnico}`;
+        }
+    </script>
+</body>
+</html>
